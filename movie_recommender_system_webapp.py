@@ -9,7 +9,7 @@ import streamlit as st
 df= pd.read_csv('movies.csv')
 df.drop('movieId',axis=1,inplace=True)
 model = SentenceTransformer("all-MiniLM-L6-v2")
-list_embedding= pickle.load(open("C:/Users/Premier UK/movies_list_embeddings_.pkl","rb"))
+list_embedding= pickle.load(open("movies_list_embeddings_.pkl","rb"))
 
 #query='suggest any romantic movies'
 def recommendations(query, list_embedding, df, top=10):
